@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <corners android:radius="10dp"></corners>
+            <gradient
+                android:endColor="@color/color_right_toolbar"
+                android:startColor="@color/color_left_toolbar"/>
+            <padding
+                android:bottom="2dp"
+                android:left="2dp"
+                android:right="2dp"
+                android:top="2dp"
+                />
+        </shape>
+    </item>
+
+    <item
+        android:bottom="2dp"
+        android:left="2dp"
+        android:right="2dp"
+        android:top="2dp">
+        <shape>
+            <corners android:radius="10dp"></corners>
+            <solid android:color="#fff" />
+        </shape>
+    </item>
+
+</layer-list>

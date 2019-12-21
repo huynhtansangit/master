@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraint_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    tools:context=".MainActivity">
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spinkitview_login"
+        android:layout_width="386dp"
+        android:layout_height="55dp"
+        app:SpinKit_Color="@color/blue_violet"
+        app:layout_constraintBottom_toTopOf="@+id/im_rentaline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_showpass"
+        app:layout_constraintVertical_bias="0.886" />
+
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:background="@drawable/et_username"
+        android:ems="10"
+        android:focusableInTouchMode="true"
+        android:fontFamily="@font/abhaya_libre"
+        android:hint="Email"
+        android:inputType="text"
+        android:paddingLeft="60dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="330dp"
+        android:layout_height="50dp"
+        android:background="@drawable/et_password"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="60dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/et_username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="110dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.905"
+        app:srcCompat="@drawable/forrenticon" />
+
+
+    <ImageView
+        android:id="@+id/im_rentaline"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:onClick="dummyCLick"
+        android:src="@drawable/logo_app"
+        android:transitionName="logoImage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.526"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.822" />
+
+    <TextView
+        android:id="@+id/tx_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tx_register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_rentaline"
+        app:layout_constraintVertical_bias="0.295" />
+
+    <TextView
+        android:id="@+id/tv_forgotpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="216dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:fontFamily="@font/advent_pro"
+        android:onClick="dummyCLick"
+        android:text="Forgot password ?"
+        android:textColor="#ffff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/spinkitview_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        app:layout_constraintVertical_bias="0.025" />
+
+    <CheckBox
+        android:id="@+id/cb_showpass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/advent_pro"
+        android:text="Show password"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tv_forgotpass"
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/spinkitview_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_forgotpass"
+        app:layout_constraintTop_toBottomOf="@+id/cb_showpass">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="2"
+            android:background="@drawable/ripple_button"
+            android:fontFamily="@font/advent_pro"
+            android:text="LOGIN"
+            android:textColor="@color/rippelColor"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:transitionName="btnTrans" />
+
+        <CheckBox
+            android:id="@+id/remember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.75"
+            android:fontFamily="@font/advent_pro"
+            android:text="Remember me"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="256dp"
+            tools:layout_editor_absoluteY="559dp" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">RENTaLine</string>
+    <string name="Open">Open</string>
+    <string name="Close">Close</string>
+    <string name="tab_text_1">Home</string>
+    <string name="tab_text_2">Sort by</string>
+    <string name="tab_text_3">"Post manager"</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

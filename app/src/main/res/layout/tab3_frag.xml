@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <Button
+
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/newpost"
+        android:layout_margin="5dp"
+        android:text="New post"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:background="@drawable/gradient_color_toobar"
+        android:shadowRadius="5"
+        android:fontFamily="@font/advent_pro"
+        />
+    <com.baoyz.widget.PullRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/list_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+    </com.baoyz.widget.PullRefreshLayout>
+</LinearLayout>

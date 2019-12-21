@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:id="@+id/Linear_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_backround"
+    android:padding="20dp"
+    tools:context=".register"
+    >
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044">
+
+        <ImageButton
+            android:id="@+id/Ibtn_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="?android:selectableItemBackgroundBorderless"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_CreateAccount"
+            app:layout_constraintHorizontal_bias="0.207"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_CreateAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_textview"
+            android:fontFamily="@font/chela_one"
+            android:gravity="right"
+            android:onClick="dummyCLick"
+            android:text="Create account"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="35dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="72dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/iv_logo_register"
+            android:layout_width="280dp"
+            android:layout_height="90dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/logo_app"
+            android:transitionName="logoImage" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:background="@drawable/relative_backround"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_regis_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/abhaya_libre"
+            android:textSize="20dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="30">
+
+            <EditText
+                android:id="@+id/et_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/icons8_user_200px"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="Your name..."
+                android:inputType="textPersonName"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_regis_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/abhaya_libre"
+            android:textSize="20dp"
+            android:textStyle="bold">
+
+            <EditText
+                android:id="@+id/et_regis_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:drawableRight="@drawable/icons8_password_200px_1"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="Email"
+                android:inputType="textPersonName"
+                android:textStyle="bold" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_regis_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/abhaya_libre"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/et_regis_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tv_regis_password_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:fontFamily="@font/abhaya_libre"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/et_regis_password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/abhaya_libre"
+                android:hint="Password Confirm"
+                android:inputType="textPassword"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frame_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+<ProgressBar
+    android:id="@+id/progress_bar_register"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="?android:attr/progressBarStyle"
+    android:indeterminateDrawable="@drawable/progressbar_custom"
+    android:indeterminateDuration="@android:integer/config_mediumAnimTime"
+    />
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/ripple_button"
+            android:fontFamily="@font/advent_pro"
+            android:textStyle="bold"
+            android:text="C r e a t e"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:transitionName="btnTrans"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.2"
+            app:layout_constraintStart_toStartOf="@+id/linearLayout6"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+            app:layout_constraintVertical_bias="0.846" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

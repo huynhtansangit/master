@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".menu_activity"
+    >
+    <LinearLayout
+        android:id="@+id/above_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:background="@drawable/ripple_item_in_navigation"
+        android:orientation="vertical"/>
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:id="@+id/action_toolbar"
+        android:background="@drawable/gradient_color_toobar">
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/Drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/darkbackground">
+        <FrameLayout
+            android:id="@+id/include_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigattionview"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@drawable/white_backround"
+            android:onClick="dummyCLick"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:textAlignment="center"
+            android:theme="@style/NavigationStyle"
+            app:headerLayout="@layout/header"
+            app:itemBackground="@drawable/ripple_item_in_navigation"
+            app:itemIconPadding="18dp"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/dark_gray"
+            app:menu="@menu/menu_drawer" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</LinearLayout>

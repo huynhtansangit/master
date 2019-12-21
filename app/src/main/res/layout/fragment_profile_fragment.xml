@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_profile"
+    tools:context=".Profile_fragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="250dp"
+        android:layout_height="280dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.372">
+
+        <ImageView
+            android:id="@+id/im_Avt_profile"
+            android:layout_width="140dp"
+            android:layout_height="0dp"
+            android:layout_weight="1.5"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/tv_fragYourname"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aladin"
+            android:text="Your name..."
+            android:textColor="@color/white_smoke"
+            android:textSize="24sp"
+            android:visibility="visible"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_FragdatebeginUsing"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/aladin"
+            android:text="Created on: "
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="italic"
+            android:visibility="visible"
+            android:paddingLeft="8sp"
+            android:paddingRight="8sp"
+            android:layout_marginBottom="10dp"/>
+
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:id="@+id/linearInProfile"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_backround"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="30dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icons8_address_100px" />
+
+                <TextView
+                    android:id="@+id/tv_youraddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aladin"
+                    android:paddingLeft="30dp"
+                    android:text="Your address"
+                    android:textColor="@color/dark_cyan"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:paddingRight="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icons8_phone_android_96px" />
+
+                <TextView
+                    android:id="@+id/tv_yourphone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aladin"
+                    android:paddingLeft="30dp"
+                    android:text="Phone number "
+                    android:textColor="@color/dark_cyan"
+                    android:textSize="20sp"
+                    android:paddingRight="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icons8_genderqueer_96px" />
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aladin"
+                    android:paddingLeft="30dp"
+                    android:text="Male/Female/Another"
+                    android:textColor="@color/dark_cyan"
+                    android:textSize="20sp"
+                    android:paddingRight="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/icon_gift" />
+
+                <TextView
+                    android:id="@+id/tv_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/aladin"
+                    android:paddingLeft="30dp"
+                    android:text="Your birthday"
+                    android:textColor="@color/dark_cyan"
+                    android:textSize="20sp"
+                    android:textStyle="italic"
+                    android:paddingRight="16dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp">
+                <Button
+                    android:textStyle="bold"
+                    android:id="@+id/btn_edit_profile"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/ripple_gradient_button"
+                    android:fontFamily="@font/advent_pro"
+                    android:text=" Edit "
+                    android:textColor="@color/white_smoke"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:layout_marginLeft="20dp"
+                    />
+                <Button
+                    android:textStyle="bold"
+                    android:id="@+id/btn_changePassword"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@drawable/ripple_gradient_button"
+                    android:fontFamily="@font/advent_pro"
+                    android:text=" Change password "
+                    android:textColor="@color/white_smoke"
+                    android:textSize="20sp"
+                    android:textAllCaps="false"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- TODO: Update blank fragment layout -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#00C853</item>
+        <!-- Control highlight-->
+        <item name="android:colorControlHighlight">@color/dodger_blue</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+    <style name="Theme_custom" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dark_gray</item>
+        <item name="colorPrimaryDark">@color/Primary_color</item>
+        <item name="colorAccent">#00C853</item>
+
+        <!-- Control highlight-->
+        <item name="android:colorControlHighlight">#87CEEB</item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="NavigationStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/chela_one</item>
+        <item name="android:listPreferredItemHeightSmall">45dp</item>
+        <item name="listPreferredItemHeightSmall">45dp</item>
+        <item name="android:checkable">true</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="guideforhost_dialog">
+        <item name="android:background">@drawable/guideforhost</item>
+    </style>
+    <style name="guideforclient_dialog">
+        <item name="android:background">@drawable/guideforclient</item>
+    </style>
+</resources>

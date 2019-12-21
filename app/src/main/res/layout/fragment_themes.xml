@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".themes"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <Button
+        android:id="@+id/summer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="1dp"
+        android:text="Summer theme"
+        android:textAllCaps="false"
+        android:fontFamily="@font/abhaya_libre"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:background="@drawable/ripple_border_raised_button"/>
+    <Button
+        android:id="@+id/newyear"
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="New year theme"
+        android:textAllCaps="false"
+        android:fontFamily="@font/abhaya_libre"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:background="@drawable/ripple_border_raised_button"/>
+    <Button
+        android:id="@+id/classic"
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Classical theme"
+        android:textAllCaps="false"
+        android:fontFamily="@font/abhaya_libre"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:background="@drawable/ripple_border_raised_button"/>
+    <Button
+        android:id="@+id/btn_default"
+        android:layout_margin="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Default theme"
+        android:textAllCaps="false"
+        android:fontFamily="@font/abhaya_libre"
+        android:textStyle="italic"
+        android:textSize="18sp"
+        android:background="@drawable/ripple_border_raised_button"/>
+</LinearLayout>

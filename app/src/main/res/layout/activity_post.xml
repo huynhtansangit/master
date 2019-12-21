@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/snow_background1"
+    tools:context=".Post">
+    <!---button report - button - id=report_btn -->
+    <!---hình của bài viết - Imageview - id=postImg -->
+    <!---tiêu đề bài viết - textview - id= postTitle -->
+    <!---Tên phương tiện - textview - id= Vhc_name-->
+    <!---Giá thuê - textview - id= postPrice -->
+    <!---button đặt chỗ - button - id = rent_btn-->
+    <!---Nhà sản xuất - textview - id = product -->
+    <!---Số ghế - textview - id = NumOfSeat -->
+    <!---Loại xe - textview - id = Type -->
+    <!---Lượt xem - textview - id = view -->
+    <!---Post detail - TextView - id = postDetail-->
+    <!---Post cmt text - EditText - id = cmtInput-->
+    <!---Cmt button - Button - id = CmtBtn -->
+    <!---Review list - ListView - id = reviewList -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/gradient_color_toobar">
+
+            <ImageButton
+                android:id="@+id/ImgBtn_backArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/postPg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:orientation="horizontal"
+                android:id="@+id/postInfo"
+                android:background="#CCffffff"
+                android:layout_gravity="center">
+                <!--<<<<<<<<<<<<<<< id = postImg : hình của bài viết >>>>>>>>>>-->
+                <ImageView
+                    android:id="@+id/postImg"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:src="@drawable/no_img"
+                    android:layout_margin="10dp"/>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:orientation="vertical"
+                    android:layout_margin="30dp">
+                    <!--- tiêu đề bài viết id= postTitle -->
+                    <TextView
+                        android:fontFamily="@font/aclonica"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:id="@+id/postTitle"
+                        android:textSize="12sp"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:text="Post title"
+                        android:gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3.5"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+                            <TextView
+                                android:fontFamily="@font/aclonica"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text="Name" />
+
+                            <TextView
+                                android:fontFamily="@font/aclonica"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                android:text="Price"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:orientation="vertical">
+                            <!---Tên xe
+                            id= Vhc_name
+                            loại= textview
+                            -->
+                            <TextView
+                                android:fontFamily="@font/aladin"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="14sp"
+                                android:text="hhjhj"
+                                android:id="@+id/Vhc_name"
+                                android:gravity="right"/>
+                            <!-- Giá
+                            id= postPrice
+                            loại= textview
+                            -->
+                            <TextView
+                                android:fontFamily="@font/aladin"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"
+                                android:textSize="14sp"
+                                android:text="1.500.000đ"
+                                android:id="@+id/postPrice"
+                                android:gravity="right"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--<<<<<<<<<<<<<<<button đặt chỗ id = rent_btn >>>>>>>>>>-->
+            <Button
+                android:id="@+id/rent_btn"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Contact"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:background="@drawable/ripple_effect_raised"
+                android:shadowRadius="5"
+                android:fontFamily="@font/advent_pro"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                >
+                <!---Nhà sản xuất - textview - id = product -->
+                <TextView
+                    android:fontFamily="@font/aladin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.75"
+                    android:textSize="14sp"
+                    android:text="Producer"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:id="@+id/product"
+                    android:background="@drawable/tagborder"
+                    />
+                <!---Số ghế - textview - id = NumOfSeat -->
+                <TextView
+                    android:fontFamily="@font/aladin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.75"
+                    android:textSize="14sp"
+                    android:text="Seats"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:id="@+id/NumOfSeat"
+                    android:background="@drawable/tagborder"
+                    />
+
+                <!---Lượt xem - textview - id = view -->
+                <TextView
+                    android:fontFamily="@font/aladin"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="Views"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:id="@+id/view"
+                    android:background="@drawable/tagborder"
+                    />
+                <ImageButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textSize="14sp"
+                    android:text="Delete"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:id="@+id/btn_delete"
+                    android:src="@drawable/ic_delete"
+                    android:background="@drawable/ripple_effect_raised"
+                    />
+            </LinearLayout>
+            <TextView
+                android:fontFamily="@font/aclonica"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Detail"
+                android:background="#D9ffffff"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#000"
+                android:paddingLeft="30dp"
+                android:paddingTop="10dp"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@drawable/gradient_color_toobar"></View>
+            <!---Post detail - TextView - id = postDetail-->
+            <TextView
+                android:id="@+id/postDetail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="#BFffffff"
+                android:fontFamily="@font/aladin"
+                android:gravity="start"
+                android:padding="10dp"
+                android:text="There's no any detail for this post. We need more description from you."
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:background="#BFffffff"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/aclonica"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="10dp"
+                    android:text="Reviews"
+                    android:textColor="#000"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@drawable/gradient_color_toobar"></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:orientation="horizontal">
+                    <!---Post cmt text - EditText - id = cmtInput-->
+                    <EditText
+                        android:id="@+id/cmtInput"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="4"
+                        android:ems="10"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:hint="Content"
+                        android:inputType="textPersonName"
+                        android:textColorHint="#37474F" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:padding="5dp">
+                        <!---Cmt button - Button - id = CmtBtn -->
+                        <Button
+                            android:id="@+id/CmtBtn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ripple_border_raised_button"
+                            android:fontFamily="@font/advent_pro"
+                            android:gravity="center"
+                            android:text="Send"
+                            android:textAlignment="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--- Review list - id = reviewList - ListView -->
+                <ListView
+                    android:id="@+id/reviewList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:scrollbars="vertical"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>
